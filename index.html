@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Cid | Analista Pleno de RIG | RGB Consultoria</title>
+<meta name="description" content="Leonardo Cid — Cientista Político com experiência em monitoramento legislativo, análise regulatória e produção de relatórios para relações governamentais.">
+<style>
+:root{
+  --bg:#f7f8fa;
+  --surface:#ffffff;
+  --ink:#101828;
+  --muted:#667085;
+  --line:#e4e7ec;
+  --blue:#155eef;
+  --blue-dark:#0040c1;
+  --blue-soft:#eff4ff;
+  --navy:#0b1730;
+  --green:#12b76a;
+  --shadow:0 20px 60px rgba(16,24,40,.09);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  background:rgba(247,248,250,.88);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(228,231,236,.8);
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em}
+.logo span{color:var(--blue)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:#475467}
+.nav-links a:hover{color:var(--blue)}
+.hero{padding:150px 0 95px;position:relative;overflow:hidden}
+.hero:before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,#dbe7ff 0%,rgba(219,231,255,0) 70%);
+  top:-180px;right:-130px;z-index:-1;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 12px;
+  background:var(--blue-soft);color:var(--blue-dark);border:1px solid #d1e0ff;
+  border-radius:999px;font-size:13px;font-weight:700;margin-bottom:22px;
+}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
+h1{font-size:clamp(40px,5vw,64px);line-height:1.02;letter-spacing:-.055em;max-width:780px}
+.highlight{color:var(--blue)}
+.hero-lead{font-size:20px;color:#475467;max-width:720px;margin:26px 0 30px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;
+  border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--line);
+  background:white;
+}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:white}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn:hover{transform:translateY(-1px)}
+.profile-card{
+  background:var(--navy);color:white;padding:28px;border-radius:var(--radius);
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.profile-card:after{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.12);right:-60px;top:-60px;
+}
+.initials{
+  width:68px;height:68px;border-radius:18px;background:#fff;color:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;
+  margin-bottom:45px;
+}
+.profile-card small{color:#98a2b3}
+.profile-card h3{font-size:24px;margin:5px 0 4px}
+.profile-card p{color:#c7d0df;font-size:14px}
+section{padding:90px 0}
+.section-label{color:var(--blue);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.04em}
+.section-intro{color:var(--muted);max-width:720px;font-size:17px;margin-top:15px}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;box-shadow:0 8px 30px rgba(16,24,40,.04);
+}
+.card-number{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:28px}
+.card h3{font-size:20px;margin-bottom:10px;letter-spacing:-.02em}
+.card p{color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.dark{background:var(--navy);color:white}
+.dark .section-label{color:#84adff}
+.dark .section-intro{color:#b6c2d4}
+.dark .card{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1);box-shadow:none}
+.dark .card p{color:#b6c2d4}
+.projects{display:grid;gap:16px}
+.project{
+  display:grid;grid-template-columns:100px 1fr;gap:25px;padding:24px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.project:last-child{border-bottom:0}
+.project-tag{color:#84adff;font-size:12px;font-weight:800;text-transform:uppercase}
+.project h3{font-size:21px;margin-bottom:5px}
+.project p{color:#b6c2d4;font-size:15px}
+.congress{
+  background:var(--blue-soft);border-top:1px solid #dbe5ff;border-bottom:1px solid #dbe5ff;
+}
+.congress-box{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.quote{
+  font-size:27px;line-height:1.25;font-weight:750;letter-spacing:-.025em;
+}
+.quote em{color:var(--blue);font-style:normal}
+.timeline{border-left:2px solid #c9d7f7;padding-left:25px;display:grid;gap:25px}
+.timeline strong{display:block;margin-bottom:3px}
+.timeline p{color:var(--muted);font-size:15px}
+.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
+.skill{
+  padding:9px 12px;border-radius:10px;background:white;border:1px solid var(--line);
+  font-size:13px;font-weight:650;color:#344054;
+}
+.cta{
+  padding:90px 0;background:linear-gradient(135deg,#0b1730 0%,#122a5a 100%);
+  color:white;text-align:center;
+}
+.cta h2{max-width:760px;margin:auto}
+.cta p{color:#b9c5d7;max-width:620px;margin:18px auto 28px}
+.cta .btn{background:white;border-color:white;color:var(--navy)}
+footer{padding:25px 0;background:#071024;color:#98a2b3;font-size:13px}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .hero-grid,.split,.congress-box{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .value-grid{grid-template-columns:1fr}
+  .project{grid-template-columns:1fr;gap:7px}
+  .profile-card{max-width:500px}
+  section{padding:70px 0}
+  footer .container{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#">Leonardo Cid <span>- Cientista Político</span></a>
+    <div class="nav-links">
+      <a href="#perfil">Perfil</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#congresso">Brasília</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="perfil">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Candidatura · Analista Pleno de Relações Institucionais e Governamentais · Brasília</div>
+      <h1>Esse é o meu compromisso com a <span class="highlight">RGB Consultoria</span></h1>
+      <p class="hero-lead">
+        Sou Leonardo, cientista político formado pela Universidade de Brasília. Tenho experiência independente em análise política, monitoramento legislativo e produção de relatórios com base em fontes oficiais e abertas. Quero aplicar essa combinação na RGB Consultoria: acompanhar mudanças políticas, regulatórias e legislativas que afetam diferentes setores e transformar informação em análises claras para apoiar decisões e relações institucionais.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projetos">Conheça meu trabalho</a>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="initials">LC</div>
+      <small>CIÊNCIA POLÍTICA · UnB</small>
+      <h3>Leonardo da Silva Cid</h3>
+      <p>Políticas Públicas · Monitoramento Legislativo · Comunicação Institucional</p>
+    </aside>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-label">Por que meu perfil</div>
+    <h2>Análise organizada para decisões e relações institucionais.</h2>
+    <p class="section-intro">
+      O trabalho de relações governamentais conecta mudanças nos Poderes, impactos para os negócios e interesses da sociedade. Minha formação em Ciência Política, experiência com processo legislativo e capacidade de trabalhar com dados me ajudam a organizar esse contexto e comunicá-lo com clareza.
+    </p>
+
+    <div class="value-grid">
+      <article class="card">
+        <div class="card-number">01 / POLÍTICA</div>
+        <h3>Monitoramento político e regulatório</h3>
+        <p>
+          Acompanho proposições, comissões, agendas e movimentações políticas e regulatórias. Essa prática pode apoiar o monitoramento integrado do Executivo, do Legislativo, do DOU e de outras fontes relevantes.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-number">02 / DADOS</div>
+        <h3>Dados que viram informação útil</h3>
+        <p>
+          Utilizo Python, APIs públicas, pandas e automação para coletar, organizar e analisar
+          dados. Também desenvolvo scripts e ferramentas próprias para transformar bases públicas em informação.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-number">03 / INSTITUIÇÕES</div>
+        <h3>Conhecimento aplicado ao ambiente público</h3>
+        <p>
+          Combino métodos quantitativos e qualitativos, pesquisa em fontes abertas e conhecimento do processo legislativo para interpretar políticas públicas e organizar informações relevantes para diferentes agendas.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="projetos">
+  <div class="container split">
+    <div>
+      <div class="section-label">Projetos</div>
+      <h2>Eu transformo curiosidade política em ferramenta.</h2>
+      <p class="section-intro">
+        Meus projetos demonstram como aplico pesquisa, dados e conhecimento institucional para monitorar temas públicos e produzir informação que apoia análises e decisões.
+      </p>
+    </div>
+
+    <div class="projects">
+      <article class="project">
+        <div class="project-tag">Dados</div>
+        <div>
+          <h3>Observatório Piauí</h3>
+          <p>
+            Painel interativo desenvolvido com Streamlit e Plotly, integrando dados do IBGE,
+            SICONFI e DATASUS para explorar indicadores públicos.
+          </p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-tag">Legislativo</div>
+        <div>
+          <h3>Automação de dados do Congresso</h3>
+          <p>
+            Desenvolvimento de rotinas para coleta de dados por APIs públicas da Câmara dos
+            Deputados e do Senado Federal, com organização e geração de relatórios estruturados.
+          </p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-tag">Análise</div>
+        <div>
+          <h3>Monitoramento político e legislativo</h3>
+          <p>
+            Acompanhamento sistemático de matérias legislativas, executivas e regulatórias,
+            com produção de notas técnicas, alertas e sínteses para tomada de decisão.
+          </p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-tag">OSINT</div>
+        <div>
+          <h3>Pesquisa e verificação</h3>
+          <p>
+            Aplicação de metodologias OSINT para pesquisa e verificação de informações sobre
+            atores políticos e institucionais.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="congress" id="congresso">
+  <div class="container congress-box">
+    <div>
+      <div class="section-label">Articulação institucional</div>
+      <div class="quote">
+        Relações governamentais conectam agendas, instituições e pessoas.
+        <em>Quero contribuir para esse diálogo.</em>
+      </div>
+    </div>
+    <div class="timeline">
+      <div>
+        <strong>Brasília como referência</strong>
+        <p>Nasci e cresci em Brasília, em contato próximo com o ambiente político e institucional da capital.</p>
+      </div>
+      <div>
+        <strong>Formação na UnB</strong>
+        <p>Bacharelado em Ciência Política, com ênfase em processo legislativo, métodos quantitativos e qualitativos e administração pública.</p>
+      </div>
+      <div>
+        <strong>Experiência prática</strong>
+        <p>Monitoramento de comissões e proposições, análise política, produção de relatórios e desenvolvimento de ferramentas de dados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <div class="section-label">O encaixe</div>
+      <h2>Como posso contribuir com a RGB Consultoria.</h2>
+    </div>
+    <div>
+      <p class="section-intro" style="margin-top:0">
+        A RGB Consultoria acompanha o processo legislativo e regulatório para clientes de diferentes setores. Minha experiência com monitoramento político, pesquisa em fontes oficiais e abertas e produção de relatórios pode contribuir para analisar cenários, mapear atores e riscos políticos e comunicar impactos de forma clara aos clientes.
+      </p>
+      <div class="skills">
+        <span class="skill">Processo legislativo federal</span>
+        <span class="skill">Monitoramento legislativo</span>
+        <span class="skill">Monitoramento regulatório</span>
+        <span class="skill">Informes e relatórios</span>
+        <span class="skill">Notas técnicas</span>
+        <span class="skill">Relatórios executivos</span>
+        <span class="skill">Stakeholders</span>
+        <span class="skill">Materiais para reuniões</span>
+        <span class="skill">Apoio a agendas e follow-ups</span>
+        <span class="skill">Python</span>
+        <span class="skill">APIs públicas</span>
+        <span class="skill">Análise de dados</span>
+        <span class="skill">OSINT</span>
+        <span class="skill">IA generativa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="container">
+    <h2>Quero contribuir para análises que orientem decisões em relações governamentais.</h2>
+    <p>
+      Acredito que minha experiência em análise política, monitoramento legislativo, pesquisa e produção de relatórios pode apoiar a equipe da RGB Consultoria na leitura de cenários e no acompanhamento de pautas legislativas e regulatórias relevantes para seus clientes.
+    </p>
+    <a class="btn" href="mailto:leocid700@gmail.com?subject=Contato%20-%20Leonardo%20Cid">
+      Entrar em contato
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Leonardo da Silva Cid</span>
+    <span>Brasília, DF</span>
+  </div>
+</footer>
+
+</body>
+</html>
